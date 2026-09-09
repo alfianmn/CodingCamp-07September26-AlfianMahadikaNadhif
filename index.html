@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard – RevoU</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ===== TOP BAR ===== -->
+    <header class="topbar">
+      <div class="topbar__left">
+        <span class="topbar__logo">📚 RevoU Dashboard</span>
+      </div>
+      <div class="topbar__right">
+        <button id="themeToggle" class="btn btn--icon" aria-label="Toggle dark mode" title="Toggle Light / Dark Mode">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="dashboard">
+
+      <!-- ===== GREETING SECTION ===== -->
+      <section class="card card--greeting" aria-label="Greeting">
+        <div class="greeting__body">
+          <p id="greetingText" class="greeting__text">Selamat Datang!</p>
+          <h1 id="greetingName" class="greeting__name">Halo, Teman! 👋</h1>
+          <p id="dateText" class="greeting__date"></p>
+          <p id="clockText" class="greeting__clock">00:00:00</p>
+        </div>
+        <div class="greeting__name-form">
+          <input
+            type="text"
+            id="nameInput"
+            class="input"
+            placeholder="Masukkan namamu…"
+            maxlength="40"
+            aria-label="Nama kamu"
+          />
+          <button id="saveNameBtn" class="btn btn--primary">Simpan</button>
+        </div>
+      </section>
+
+      <!-- ===== FOCUS TIMER SECTION ===== -->
+      <section class="card card--timer" aria-label="Focus Timer">
+        <h2 class="card__title">⏱ Focus Timer</h2>
+
+        <!-- Custom Pomodoro Duration (Challenge: Change Pomodoro Time) -->
+        <div class="timer__config">
+          <label for="pomodoroMinutes" class="timer__config-label">Durasi (menit):</label>
+          <input
+            type="number"
+            id="pomodoroMinutes"
+            class="input input--small"
+            min="1"
+            max="120"
+            value="25"
+            aria-label="Durasi pomodoro dalam menit"
+          />
+          <button id="applyDurationBtn" class="btn btn--secondary">Terapkan</button>
+        </div>
+
+        <div class="timer__display" aria-live="polite" aria-atomic="true">
+          <span id="timerDisplay">25:00</span>
+        </div>
+
+        <div class="timer__controls">
+          <button id="timerStart" class="btn btn--primary">▶ Mulai</button>
+          <button id="timerStop" class="btn btn--secondary" disabled>⏸ Berhenti</button>
+          <button id="timerReset" class="btn btn--danger">↺ Reset</button>
+        </div>
+
+        <p id="timerStatus" class="timer__status">Siap untuk fokus!</p>
+      </section>
+
+      <!-- ===== TO-DO LIST SECTION ===== -->
+      <section class="card card--todo" aria-label="To-Do List">
+        <div class="todo__header">
+          <h2 class="card__title">✅ To-Do List</h2>
+          <div class="todo__sort">
+            <label for="sortSelect" class="sr-only">Urutkan tugas</label>
+            <select id="sortSelect" class="input input--small" aria-label="Urutkan tugas">
+              <option value="default">Urutan Default</option>
+              <option value="az">A → Z</option>
+              <option value="za">Z → A</option>
+              <option value="done">Selesai Terakhir</option>
+              <option value="undone">Belum Selesai Dulu</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="todo__add">
+          <input
+            type="text"
+            id="todoInput"
+            class="input"
+            placeholder="Tambah tugas baru…"
+            maxlength="100"
+            aria-label="Tambah tugas baru"
+          />
+          <button id="todoAddBtn" class="btn btn--primary">+ Tambah</button>
+        </div>
+
+        <ul id="todoList" class="todo__list" aria-label="Daftar tugas" role="list">
+          <!-- Tasks are rendered by JavaScript -->
+        </ul>
+
+        <p id="todoEmpty" class="todo__empty">Belum ada tugas. Tambahkan sekarang! 🎯</p>
+      </section>
+
+      <!-- ===== QUICK LINKS SECTION ===== -->
+      <section class="card card--links" aria-label="Quick Links">
+        <h2 class="card__title">🔗 Quick Links</h2>
+
+        <div class="links__add">
+          <input
+            type="text"
+            id="linkNameInput"
+            class="input"
+            placeholder="Nama (contoh: YouTube)"
+            maxlength="30"
+            aria-label="Nama link"
+          />
+          <input
+            type="url"
+            id="linkUrlInput"
+            class="input"
+            placeholder="URL (contoh: https://youtube.com)"
+            aria-label="URL link"
+          />
+          <button id="linkAddBtn" class="btn btn--primary">+ Tambah Link</button>
+        </div>
+
+        <div id="linksList" class="links__grid" aria-label="Daftar quick links">
+          <!-- Links are rendered by JavaScript -->
+        </div>
+
+        <p id="linksEmpty" class="links__empty">Belum ada quick links. Tambahkan situs favoritmu! 🌐</p>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p>Dibuat dengan ❤️ oleh Alfian Mahadika Nadhif &mdash; RevoU Coding Camp 2026</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

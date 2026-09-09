@@ -1,0 +1,656 @@
+/* ============================================================
+   style.css – RevoU Dashboard
+   Satu file CSS untuk semua styling
+   ============================================================ */
+
+/* ── 1. CSS Custom Properties (Design Tokens) ─────────────── */
+:root {
+  /* Light mode colors */
+  --bg-body:        #f0f4f8;
+  --bg-card:        #ffffff;
+  --bg-topbar:      #ffffff;
+  --text-primary:   #1a202c;
+  --text-secondary: #4a5568;
+  --text-muted:     #718096;
+  --border:         #e2e8f0;
+  --accent:         #4f46e5;       /* indigo */
+  --accent-hover:   #4338ca;
+  --accent-light:   #eef2ff;
+  --success:        #16a34a;
+  --success-light:  #dcfce7;
+  --danger:         #dc2626;
+  --danger-light:   #fee2e2;
+  --warning:        #d97706;
+  --shadow-sm:      0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md:      0 4px 6px rgba(0,0,0,.07), 0 2px 4px rgba(0,0,0,.06);
+  --shadow-lg:      0 10px 15px rgba(0,0,0,.08), 0 4px 6px rgba(0,0,0,.05);
+  --radius-sm:      6px;
+  --radius-md:      12px;
+  --radius-lg:      16px;
+  --font-sans:      'Segoe UI', system-ui, -apple-system, sans-serif;
+  --transition:     .2s ease;
+}
+
+/* Dark mode tokens */
+[data-theme="dark"] {
+  --bg-body:        #0f172a;
+  --bg-card:        #1e293b;
+  --bg-topbar:      #1e293b;
+  --text-primary:   #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted:     #94a3b8;
+  --border:         #334155;
+  --accent:         #818cf8;
+  --accent-hover:   #a5b4fc;
+  --accent-light:   #1e1b4b;
+  --success:        #4ade80;
+  --success-light:  #052e16;
+  --danger:         #f87171;
+  --danger-light:   #450a0a;
+  --shadow-sm:      0 1px 3px rgba(0,0,0,.3);
+  --shadow-md:      0 4px 6px rgba(0,0,0,.25);
+  --shadow-lg:      0 10px 15px rgba(0,0,0,.3);
+}
+
+/* ── 2. Reset & Base ───────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+/* Screen-reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+/* ── 3. Top Bar ────────────────────────────────────────────── */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  height: 56px;
+  background: var(--bg-topbar);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition);
+}
+
+.topbar__logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -.3px;
+}
+
+/* ── 4. Buttons ────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .35rem;
+  padding: .5rem 1rem;
+  font-size: .875rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition), opacity var(--transition),
+              transform .1s ease, box-shadow var(--transition);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(.97);
+}
+
+.btn:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--primary:hover:not(:disabled) { background: var(--accent-hover); }
+
+.btn--secondary {
+  background: var(--border);
+  color: var(--text-primary);
+}
+.btn--secondary:hover:not(:disabled) { filter: brightness(.92); }
+
+.btn--danger {
+  background: var(--danger);
+  color: #fff;
+}
+.btn--danger:hover:not(:disabled) { filter: brightness(.88); }
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  padding: .35rem .5rem;
+}
+.btn--ghost:hover:not(:disabled) { background: var(--border); color: var(--text-primary); }
+
+.btn--icon {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: .4rem .6rem;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+.btn--icon:hover { background: var(--border); }
+
+/* ── 5. Inputs ─────────────────────────────────────────────── */
+.input {
+  width: 100%;
+  padding: .5rem .75rem;
+  font-size: .875rem;
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  background: var(--bg-body);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition), background-color var(--transition);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  background: var(--bg-card);
+  box-shadow: 0 0 0 3px rgba(79,70,229,.15);
+}
+
+.input--small {
+  width: auto;
+  min-width: 0;
+  padding: .4rem .6rem;
+}
+
+/* ── 6. Dashboard Grid ─────────────────────────────────────── */
+.dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+/* ── 7. Cards ──────────────────────────────────────────────── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: background-color var(--transition), border-color var(--transition),
+              box-shadow var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -.2px;
+}
+
+/* Greeting spans full width */
+.card--greeting {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, var(--accent) 0%, #7c3aed 100%);
+  border-color: transparent;
+  color: #fff;
+}
+
+.card--todo {
+  grid-column: 1 / -1;
+}
+
+/* ── 8. Greeting Section ───────────────────────────────────── */
+.greeting__body {
+  flex: 1;
+}
+
+.greeting__text {
+  font-size: .9rem;
+  opacity: .85;
+  margin-bottom: .15rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.greeting__name {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: .4rem;
+  line-height: 1.2;
+}
+
+.greeting__clock {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-bottom: .25rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.greeting__date {
+  font-size: .875rem;
+  opacity: .8;
+  color: #fff;
+  margin-bottom: .15rem;
+}
+
+.greeting__name-form {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  min-width: 200px;
+}
+
+.greeting__name-form .input {
+  background: rgba(255,255,255,.2);
+  border-color: rgba(255,255,255,.35);
+  color: #fff;
+}
+
+.greeting__name-form .input::placeholder { color: rgba(255,255,255,.65); }
+.greeting__name-form .input:focus {
+  background: rgba(255,255,255,.3);
+  border-color: rgba(255,255,255,.7);
+  box-shadow: 0 0 0 3px rgba(255,255,255,.2);
+}
+
+.greeting__name-form .btn--primary {
+  background: rgba(255,255,255,.25);
+  border: 1.5px solid rgba(255,255,255,.5);
+  backdrop-filter: blur(4px);
+}
+.greeting__name-form .btn--primary:hover {
+  background: rgba(255,255,255,.35);
+}
+
+/* ── 9. Focus Timer Section ────────────────────────────────── */
+.card--timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.timer__config {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.timer__config-label {
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.timer__config .input--small {
+  width: 72px;
+  text-align: center;
+}
+
+.timer__display {
+  font-size: 3.5rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 3px;
+  color: var(--accent);
+  background: var(--accent-light);
+  border-radius: var(--radius-md);
+  padding: .75rem 2rem;
+  min-width: 220px;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.timer__display.--running {
+  color: var(--success);
+  background: var(--success-light);
+  animation: pulse 2s infinite;
+}
+
+.timer__display.--done {
+  color: var(--danger);
+  background: var(--danger-light);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .75; }
+}
+
+.timer__controls {
+  display: flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.timer__status {
+  font-size: .8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  min-height: 1.2em;
+}
+
+/* ── 10. To-Do List Section ────────────────────────────────── */
+.todo__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.todo__header .card__title { margin-bottom: 0; }
+
+.todo__sort {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.todo__add {
+  display: flex;
+  gap: .6rem;
+  margin-bottom: 1rem;
+}
+
+.todo__add .input { flex: 1; }
+
+.todo__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.todo__empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: .875rem;
+  padding: 1.5rem 0;
+}
+
+/* Each task item */
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .65rem .85rem;
+  background: var(--bg-body);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition), border-color var(--transition),
+              opacity var(--transition);
+}
+
+.todo-item:hover { border-color: var(--accent); }
+
+.todo-item.--done {
+  opacity: .6;
+  border-style: dashed;
+}
+
+.todo-item.--done .todo-item__text {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+/* Custom checkbox */
+.todo-item__check {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition);
+  position: relative;
+}
+
+.todo-item__check:checked {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.todo-item__check:checked::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 0px;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.todo-item__check:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.todo-item__text {
+  flex: 1;
+  font-size: .875rem;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+/* Inline edit input for to-do */
+.todo-item__edit-input {
+  flex: 1;
+  font-size: .875rem;
+  padding: .2rem .45rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 4px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  outline: none;
+}
+
+.todo-item__actions {
+  display: flex;
+  gap: .25rem;
+  flex-shrink: 0;
+}
+
+/* ── 11. Quick Links Section ───────────────────────────────── */
+.links__add {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  gap: .6rem;
+  margin-bottom: 1.25rem;
+  align-items: center;
+}
+
+.links__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+.links__empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: .875rem;
+  padding: 1rem 0;
+}
+
+/* Each link chip */
+.link-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .45rem .85rem;
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  border-radius: 999px;
+  font-size: .825rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--transition), color var(--transition),
+              transform .1s ease;
+  cursor: pointer;
+  max-width: 200px;
+}
+
+.link-chip:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.link-chip__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 120px;
+}
+
+.link-chip__delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: .8rem;
+  padding: 0;
+  line-height: 1;
+  opacity: .7;
+  transition: opacity var(--transition);
+}
+.link-chip__delete:hover { opacity: 1; }
+
+/* ── 12. Footer ────────────────────────────────────────────── */
+.footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: .8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
+/* ── 13. Toast Notification ────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  padding: .7rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-size: .875rem;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: var(--shadow-lg);
+  animation: toastIn .25s ease forwards;
+  pointer-events: none;
+  max-width: 300px;
+}
+
+.toast--success { background: var(--success); }
+.toast--error   { background: var(--danger); }
+.toast--info    { background: var(--accent); }
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── 14. Responsive ────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    padding: 1rem .85rem 3rem;
+    gap: 1rem;
+  }
+
+  .card--greeting {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .greeting__name-form {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .greeting__clock { font-size: 2.2rem; }
+  .greeting__name  { font-size: 1.4rem; }
+
+  .timer__display  { font-size: 2.6rem; min-width: 0; padding: .65rem 1.5rem; }
+
+  .links__add {
+    grid-template-columns: 1fr;
+  }
+
+  .links__add .btn { width: 100%; }
+
+  .todo__add { flex-direction: column; }
+  .todo__add .btn { width: 100%; }
+
+  .todo__header { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 450px) {
+  .timer__controls { gap: .4rem; }
+  .timer__controls .btn { padding: .45rem .7rem; font-size: .8rem; }
+}
