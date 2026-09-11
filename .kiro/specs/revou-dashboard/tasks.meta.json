@@ -1,0 +1,436 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. Scaffolding proyek dan kerangka HTML": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108749738
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108769544
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789109007484
+      }
+    ],
+    "2.1 Implementasikan modul `StorageAPI` di `js/app.js`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108750252
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108770367
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789109008368
+      }
+    ],
+    "2.2 Tulis unit test untuk `StorageAPI`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108750724
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789109014225
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789111226847
+      }
+    ],
+    "3.1 Implementasikan fungsi-fungsi logika inti `GreetingWidget`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108751082
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789109015129
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789111227537
+      }
+    ],
+    "3.2 Tulis property test untuk `formatTime` (Property 1)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108751305
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789111244016
+      }
+    ],
+    "3.3 Tulis property test untuk `formatDate` (Property 2)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108751476
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789111244640
+      }
+    ],
+    "3.4 Tulis property test untuk `getGreeting` (Property 3)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108751679
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789111245491
+      }
+    ],
+    "4.1 Implementasikan state dan fungsi-fungsi inti `TimerWidget`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108751886
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789109015556
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789111228215
+      }
+    ],
+    "4.2 Tulis property test konsistensi state tombol (Property 4)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108752111
+      }
+    ],
+    "4.3 Tulis property test stop mempertahankan sisa waktu (Property 5)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108752281
+      }
+    ],
+    "4.4 Tulis unit test untuk `TimerWidget`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108752401
+      }
+    ],
+    "5.1 Implementasikan fungsi validasi dan CRUD inti `TodoWidget`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108752642
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789109016136
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789111229087
+      }
+    ],
+    "5.2 Tulis property test penambahan tugas valid (Property 6)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108752904
+      }
+    ],
+    "5.3 Tulis property test penolakan teks tidak valid (Property 7)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108753024
+      }
+    ],
+    "5.4 Tulis property test edit tugas tidak valid (Property 8)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108753134
+      }
+    ],
+    "5.5 Tulis property test penghapusan tugas (Property 9)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108753242
+      }
+    ],
+    "5.6 Tulis property test round-trip persistensi todo (Property 10)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108753381
+      }
+    ],
+    "6.1 Implementasikan fungsi validasi dan CRUD `LinksWidget`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108753537
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789109016704
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789111229745
+      }
+    ],
+    "6.2 Tulis property test penambahan tautan valid (Property 11)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108753681
+      }
+    ],
+    "6.3 Tulis property test penolakan URL tidak valid (Property 12)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108753834
+      }
+    ],
+    "6.4 Tulis property test batas kapasitas tautan (Property 13)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108753970
+      }
+    ],
+    "6.5 Tulis property test round-trip persistensi tautan (Property 14)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108754112
+      }
+    ],
+    "7. Checkpoint — pastikan semua tes lulus": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108754230
+      }
+    ],
+    "8.1 Implementasikan modul `ThemeManager`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108754341
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789111245804
+      }
+    ],
+    "8.2 Tulis property test round-trip persistensi tema (Property 15)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108754455
+      }
+    ],
+    "8.3 Tulis unit test untuk `ThemeManager`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108754580
+      }
+    ],
+    "9.1 Tambahkan fitur nama pengguna ke `GreetingWidget`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108754697
+      }
+    ],
+    "9.2 Tulis property test salam mencantumkan nama valid (Property 16)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108755018
+      }
+    ],
+    "9.3 Tulis property test penolakan nama tidak valid (Property 17)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108755167
+      }
+    ],
+    "10.1 Tambahkan fitur kustomisasi durasi ke `TimerWidget`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108755321
+      }
+    ],
+    "10.2 Tulis property test penolakan durasi tidak valid (Property 18)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108755541
+      }
+    ],
+    "10.3 Tulis property test penolakan perubahan durasi saat timer berjalan (Property 19)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108755833
+      }
+    ],
+    "11.1 Tambahkan fungsi `isDuplicate` ke `TodoWidget`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108755983
+      }
+    ],
+    "11.2 Tulis property test deteksi duplikasi case-insensitive (Property 20)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108756118
+      }
+    ],
+    "11.3 Tulis property test pengecualian diri sendiri saat edit (Property 21)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108756298
+      }
+    ],
+    "12.1 Implementasikan fungsi `sortTasks` dan integrasi UI di `TodoWidget`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108756454
+      }
+    ],
+    "12.2 Tulis property test invariant sortir A–Z (Property 22)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108756573
+      }
+    ],
+    "12.3 Tulis property test invariant sortir berdasarkan status (Property 23)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108756762
+      }
+    ],
+    "12.4 Tulis property test round-trip persistensi preferensi sortir (Property 24)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108756984
+      }
+    ],
+    "13. Checkpoint — pastikan semua tes lulus": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108757115
+      }
+    ],
+    "14.1 Implementasikan CSS base dan sistem variabel tema": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108757317
+      },
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789111246303
+      }
+    ],
+    "14.2 Implementasikan layout widget dan responsivitas": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108757445
+      }
+    ],
+    "14.3 Tulis unit test visual keterbacaan (snapshot/manual check)": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108757598
+      }
+    ],
+    "15.1 Implementasikan fungsi `init()` dan hubungkan semua widget": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108757715
+      }
+    ],
+    "15.2 Tulis unit test integrasi inisialisasi": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108757851
+      }
+    ],
+    "16.1 Siapkan konfigurasi untuk deployment GitHub Pages": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108758092
+      }
+    ],
+    "17. Checkpoint akhir — verifikasi menyeluruh": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789108758335
+      }
+    ],
+    "2. Implementasi `StorageAPI`": [
+      {
+        "executionId": "693877d8-a105-42df-bbb1-1f5f03564120",
+        "chatSessionId": "sess_cd2c293f-031b-4be7-ac43-2244bb2fb69c",
+        "timestamp": 1789111227117
+      }
+    ]
+  }
+}
